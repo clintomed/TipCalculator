@@ -1,0 +1,166 @@
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity"
+    android:background="@color/bgColor">
+
+    <TableRow>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/enter_amount"
+            android:id="@+id/enter_label"
+            android:textColor="@color/textColor"
+            android:textSize="@dimen/text_size" />
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:id="@+id/amountText"
+            android:textColor="@color/textColor"
+            android:textSize="@dimen/text_size"
+            android:singleLine="true"
+            android:backgroundTint="@color/textColor" />
+    </TableRow>
+    <TableRow>
+    <TextView
+        android:layout_height="wrap_content"
+        android:id="@+id/symbolLabel"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:text="@string/select_tip"
+        android:textColor="@color/textColor"
+        android:textSize="@dimen/text_size" />
+    </TableRow>
+
+    <TableRow
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <RadioGroup
+        android:id="@+id/radioTip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/ten_percent"
+                android:id="@+id/tenPercentRadio"
+                android:textSize="@dimen/text_size"
+                android:textColor="@color/textColor"
+                android:checked="false"
+                android:buttonTint="@color/textColor" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/fifteen_percent"
+                android:id="@+id/fifteenPercentRadio"
+                android:textSize="@dimen/text_size"
+                android:textColor="@color/textColor"
+                android:checked="false"
+                android:buttonTint="@color/textColor"/>
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/eighteen_percent"
+                android:id="@+id/eighteenPercentRadio"
+                android:textSize="@dimen/text_size"
+                android:textColor="@color/textColor"
+                android:checked="false"
+                android:buttonTint="@color/textColor"/>
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/twenty_percent"
+                android:id="@+id/twentyPercentRadio"
+                android:textSize="@dimen/text_size"
+                android:textColor="@color/textColor"
+                android:checked="false"
+                android:buttonTint="@color/textColor"/>
+        </RadioGroup>
+
+
+    </TableRow>
+
+    <TableRow
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:paddingTop="10dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight=".5"
+            android:layout_height="wrap_content"
+            android:text="@string/tip_label"
+            android:id="@+id/textView"
+            android:layout_column="0"
+            android:textColor="@color/textColor"
+            android:textSize="@dimen/text_size" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="@string/money_default"
+            android:id="@+id/tipAmount"
+            android:layout_column="1"
+            android:textSize="@dimen/text_size"
+            android:textColor="@color/textColor" />
+    </TableRow>
+
+    <TableRow
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight=".5"
+            android:layout_height="wrap_content"
+            android:text="@string/total_label"
+            android:id="@+id/textView3"
+            android:layout_column="0"
+            android:textColor="@color/textColor"
+            android:textSize="@dimen/text_size" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="@string/money_default"
+            android:id="@+id/totalAmount"
+            android:layout_column="1"
+            android:textColor="@color/textColor"
+            android:textSize="@dimen/text_size" />
+    </TableRow>
+
+    <TableRow
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:paddingTop="10dp">
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:id="@+id/sendEmail"
+            android:onClick="sendEmail"
+            android:text="@string/send_receipt"
+            android:textColor="@color/textColor"
+            android:background="@color/button_background"
+            android:textSize="@dimen/text_size"
+            android:focusable="false" />
+    </TableRow>
+
+
+</TableLayout>
